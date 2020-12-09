@@ -1,0 +1,161 @@
+:root{
+  --fw-medium:400;
+  --fw-bold:600;
+
+  --primary-color:#4E5150;
+  --secondary-color:#A9A9A9;
+  --accent-color:#e4e2e2;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family:'Montserrat', sans-serif;
+}
+
+img{
+  max-width: 100%;
+  display: block;
+}
+
+header{
+  display: flex;
+  place-items: center;
+  flex-direction: column;
+  padding-top: 3em;
+}
+
+header img{
+  border-radius: 23px;
+  width: 150px;
+  margin-bottom: 1.3em;
+}
+
+.user__name{
+  color: var(--primary-color);
+  font-weight: var(--fw-bold);
+  font-size:1.2rem;
+  margin-bottom: .3em;
+}
+
+.user__location{
+  color:var(--secondary-color);
+  font-size:.8rem;
+  font-weight: var(--fw-bold);
+  text-align: center;
+}
+
+.user__info{
+  display: flex;
+  align-items: center;
+  margin-top: 1em;
+  margin-right: 5%;
+  margin-bottom: 3em;
+}
+
+.user__info > * {
+  background: var(--accent-color);
+  /* color: var(--primary-color); */
+  padding: 1.2em 1em;
+  border-radius: 12px;
+  font-size:.6rem;
+}
+
+.counter:first-child{
+  padding: 1em 2em;
+}
+
+.user__info > * + *{
+  margin-left: 8%;
+}
+
+.counter h1{
+  text-align: center;
+  margin-bottom: .2em;
+}
+
+.counter p{
+  color: var(--secondary-color);
+  font-weight: var(--fw-bold);
+  font-size: .8rem;
+}
+
+.gallery{
+  display: grid;
+  grid-template-columns: repeat(3,118px);
+  grid-template-rows: repeat(3,117px);
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* padding: 0 5%; */
+}
+
+.gallery > * {
+  border-radius:20px;
+}
+
+.gallery__item2{
+  grid-column:2/4;
+}
+
+.gallery__item3{
+  grid-column:1/3;
+}
+
+.gallery__item4{
+  grid-column:3/4;
+  grid-row: 2/4;
+}
+
+.gallery__item5{
+  grid-column: 2/3;
+}
+
+.gallery__item6{
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+  
+footer p{
+  padding-top: 2em;
+  text-align: center;
+  font-weight: var(--fw-bold);
+}
+
+
+/* dark mode */
+
+@media (prefers-color-scheme:dark){
+  body{
+    background: #000;
+    color: #fff;
+  }
+
+  header img{
+    border: 2px solid #fff
+  }
+
+  .user__name{
+    color:#6e7573
+  }
+
+  .counter{
+    background:rgb(40, 43, 45);
+  }
+  .counter h1{
+    /* color:#000; */
+  }
+
+  .counter p{
+    /* color:#675757 */
+  }
+
+  a{
+    color: grey;
+  }
+}
