@@ -147,13 +147,7 @@ footer p{
   .counter{
     background:rgb(40, 43, 45);
   }
-  .counter h1{
-    /* color:#000; */
-  }
-
-  .counter p{
-    /* color:#675757 */
-  }
+  
 
   a{
     color: grey;
