@@ -132,13 +132,13 @@ footer p{
 
 @media (prefers-color-scheme:dark){
   body{
-    background: #000;
+    background: #181a1b;
     color: #fff;
   }
 
-  header img{
+  /* header img{
     border: 2px solid #fff
-  }
+  } */
 
   .user__name{
     color:#6e7573
@@ -151,5 +151,15 @@ footer p{
 
   a{
     color: grey;
+  }
+}
+
+/* media queries for desktop version */
+
+@media only screen and (min-width:767px){
+  
+  .gallery{
+    grid-template-columns: repeat(3,210px);
+    grid-template-rows: repeat(3,210px);
   }
 }
